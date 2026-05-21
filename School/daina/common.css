@@ -692,7 +692,7 @@ nav a:hover::after{
     }
 
     .title{
-        font-size: 14px;
+        font-size: 12px;
     }
 
     nav a{
@@ -705,7 +705,7 @@ nav a:hover::after{
 @media(max-width: 400px){
 
     .title{
-        font-size: 12px;
+        font-size: 10px;
     }
 
     .logo img{
