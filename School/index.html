@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>School Landing Page</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+
+    <style>
+        .font {
+            font-family: "Poppins";
+        }
+
+        /* hidden state */
+        .hidden-scroll {
+            opacity: 0;
+            transform: translateY(70px);
+            transition: all 1s ease;
+        }
+
+        /* show animation */
+        .show-scroll {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 font">
+
+    <!-- navbar -->
+    <header class="bg-white shadow-sm hidden-scroll">
+        <div class="max-w-7xl mx-auto px-5 flex items-center justify-between py-2">
+
+            <!-- logo -->
+            <div class="flex items-center gap-4">
+                <img class="h-20" src="/download.png" alt="logo">
+
+                <h1 class="text-xl font-semibold tracking-wider leading-tight">
+                    Bright Brain Institute
+                </h1>
+            </div>
+
+            <!-- nav -->
+            <nav class="flex items-center gap-6">
+
+                <a href=""
+                    class="font-semibold tracking-wider text-gray-800 border-b-2 border-transparent hover:text-green-600 hover:border-yellow-300 duration-300">
+                    Home
+                </a>
+
+                <a href=""
+                    class="font-semibold tracking-wider text-gray-800 border-b-2 border-transparent hover:text-green-600 hover:border-yellow-300 duration-300">
+                    Gallery
+                </a>
+
+                <a href=""
+                    class="font-semibold tracking-wider text-gray-800 border-b-2 border-transparent hover:text-green-600 hover:border-yellow-300 duration-300">
+                    Admission
+                </a>
+
+                <a href=""
+                    class="font-semibold tracking-wider text-gray-800 border-b-2 border-transparent hover:text-green-600 hover:border-yellow-300 duration-300">
+                    Announcement
+                </a>
+
+                <a href=""
+                    class="font-semibold tracking-wider text-gray-800 border-b-2 border-transparent hover:text-green-600 hover:border-yellow-300 duration-300">
+                    About
+                </a>
+
+                <a href=""
+                    class="font-semibold tracking-wider text-gray-800 border-b-2 border-transparent hover:text-green-600 hover:border-yellow-300 duration-300">
+                    Contact
+                </a>
+
+            </nav>
+        </div>
+    </header>
+
+    <!-- hero -->
+    <main>
+
+        <section class="bg-white">
+            <div class="max-w-7xl mx-auto px-5 py-16 flex items-center justify-between">
+
+                <!-- left -->
+                <div class="space-y-5 hidden-scroll">
+
+                    <h1 class="text-5xl font-bold text-gray-800 leading-tight">
+                        Investing in <br>
+                        Knowledge and <br>
+                        <span class="text-orange-400">Your Future</span>
+                    </h1>
+
+                    <p class="font-semibold text-gray-600 max-w-lg">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Cum quibusdam quod id autem iusto ullam est illo adipisci.
+                    </p>
+                    
+                    <button
+                        class="bg-sky-500 hover:bg-sky-600 duration-300 px-7 py-2 text-white font-semibold rounded-full">
+                        Contact
+                    </button>
+
+                </div>
+
+                <!-- right -->
+                <div class="hidden-scroll">
+
+                    <div
+                        class="bg-teal-700 h-80 w-80 rounded-full flex items-end justify-center overflow-hidden shadow-2xl">
+
+                        <img src="hero.png" alt=""
+                            class="h-96 object-cover hover:scale-105 duration-500">
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+<section class="bg-gray-100 hidden-scroll">
+
+    <div class="py-8 px-5 max-w-7xl mx-auto grid grid-cols-4 text-center">
+
+        <!-- 1 -->
+        <div>
+            <h2 class="text-3xl font-semibold">
+                <span class="counter" data-target="100">0</span>+
+            </h2>
+
+            <h3 class="text-xl font-semibold text-gray-600">
+                Teacher
+            </h3>
+        </div>
+
+        <!-- 2 -->
+        <div>
+            <h2 class="text-3xl font-semibold">
+                <span class="counter" data-target="4000">0</span>+
+            </h2>
+
+            <h3 class="text-xl font-semibold text-gray-600">
+                Student
+            </h3>
+        </div>
+
+        <!-- 3 -->
+        <div>
+            <h2 class="text-3xl font-semibold">
+                <span class="counter" data-target="100">0</span>%
+            </h2>
+
+            <h3 class="text-xl font-semibold text-gray-600">
+                Result
+            </h3>
+        </div>
+
+        <!-- 4 -->
+        <div>
+            <h2 class="text-3xl font-semibold">
+                <span class="counter" data-target="100">0</span>+
+            </h2>
+
+            <h3 class="text-xl font-semibold text-gray-600">
+                Award
+            </h3>
+        </div>
+
+    </div>
+
+</section>
+
+    </main>
+
+    <!-- scroll animation -->
+<script>
+
+    const observer = new IntersectionObserver((entries) => {
+
+        entries.forEach((entry, index) => {
+
+            if (entry.isIntersecting) {
+
+                setTimeout(() => {
+
+                    entry.target.classList.add("show-scroll");
+
+                }, index * 250);
+
+            }
+
+        });
+
+    }, {
+        threshold: 0.2
+    });
+
+    const hiddenElements =
+        document.querySelectorAll(".hidden-scroll");
+
+    hiddenElements.forEach((el) => {
+        observer.observe(el);
+    });
+
+
+
+    // counter animation
+
+    const counters = document.querySelectorAll(".counter");
+
+    counters.forEach((counter) => {
+
+        let started = false;
+
+        const counterObserver = new IntersectionObserver((entries) => {
+
+            entries.forEach((entry) => {
+
+                if (entry.isIntersecting && !started) {
+
+                    started = true;
+
+                    let start = 0;
+
+                    const target =
+                        +counter.getAttribute("data-target");
+
+                    const speed = target / 100;
+
+                    const updateCounter = () => {
+
+                        start += speed;
+
+                        if (start < target) {
+
+                            counter.innerText =
+                                Math.floor(start);
+
+                            requestAnimationFrame(updateCounter);
+
+                        } else {
+
+                            counter.innerText = target;
+
+                        }
+
+                    };
+
+                    updateCounter();
+
+                }
+
+            });
+
+        }, {
+            threshold: 0.5
+        });
+
+        counterObserver.observe(counter);
+
+    });
+
+</script>
+</body>
+
+</html>

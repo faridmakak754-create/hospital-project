@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+
+<body class="bg-gray-100">
+    <header class="bg-slate-600">
+        <div class="max-w-7xl mx-auto px-5 h-20 flex items-center justify-between">
+            <h1 class="text-white font-semibold text-xl ">Admin Dashboard</h1>
+
+            <div class="flex items-center gap-2">
+                <p class="text-white">Admin</p>
+                <div class="bg-white h-12 w-12 rounded-full flex items-center justify-center ">
+                    <p class=" font-semibold ">MFK</p>
+                </div>
+            </div>
+
+
+
+
+    </header>
+    <!-- left section -->
+    <section class="bg-slate-800 fixed top-20 h-screen w-50 px-5 ">
+
+        <ul class="space-y-4 text-gray-200 pt-6">
+
+            <li>
+                <a href="">
+                    <i class="fa-solid fa-chart-line mr-2"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="">
+                    <i class="fa-solid fa-user-injured mr-2"></i>
+                    Patients
+                </a>
+            </li>
+
+            <li>
+                <a href="">
+                    <i class="fa-solid fa-user-doctor mr-2"></i>
+                    Doctors
+                </a>
+            </li>
+
+            <li>
+                <a href="">
+                    <i class="fa-solid fa-calendar-check mr-2"></i>
+                    Appointments
+                </a>
+            </li>
+
+            <li><a href="">
+                    <i class="fa-solid fa-hospital mr-2"></i>
+                    Departments
+                </a>
+            </li>
+
+            <li>
+                <i class="fa-solid fa-file-invoice-dollar mr-2"></i>
+                Billing
+            </li>
+
+            <li>
+                <i class="fa-solid fa-chart-pie mr-2"></i>
+                Reports
+            </li>
+
+            <li>
+                <i class="fa-solid fa-truck-medical mr-2"></i>
+                Ambulance
+            </li>
+
+            <li>
+                <i class="fa-solid fa-pills mr-2"></i>
+                Pharmacy
+            </li>
+
+            <li>
+                <i class="fa-solid fa-gear mr-2"></i>
+                Settings
+            </li>
+
+        </ul>
+        <div class="mt-20">
+            <form action="">
+                <button class="bg-sky-300  px-6 h-8 rounded-md font-semibold cursor-pointer ">Logout</button>
+            </form>
+        </div>
+    </section>
+    <main class="ml-60  pr-5">
+
+        <section class="grid grid-cols-3 mt-7 gap-4">
+            <!-- CARD -->
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-gray-500">Doctors</p>
+                        <h2 class="text-3xl font-bold mt-2">85</h2>
+                    </div>
+
+                    <div
+                        class="bg-green-100 text-green-600 h-14 w-14 rounded-full flex items-center justify-center text-2xl">
+                        <i class="fa-solid fa-user-doctor"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD -->
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-gray-500">Appointments</p>
+                        <h2 class="text-3xl font-bold mt-2">230</h2>
+                    </div>
+
+                    <div
+                        class="bg-orange-100 text-orange-600 h-14 w-14 rounded-full flex items-center justify-center text-2xl">
+                        <i class="fa-solid fa-calendar-check"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD -->
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-gray-500">Revenue</p>
+                        <h2 class="text-3xl font-bold mt-2">$120</h2>
+                    </div>
+
+                    <div
+                        class="bg-red-100 text-red-600 h-14 w-14 rounded-full flex items-center justify-center text-2xl">
+                        <i class="fa-solid fa-dollar-sign"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class=" py-6">
+            <p class="text-xl font-semibold m-2">Appointment List +</p>
+            <table class="max-w-7xl mx-auto w-full overflow-hidden rounded-lg bg-white  ">
+               
+                <thead class="bg-slate-800 border-collapse text-white ">
+                    <tr>
+                        <th class="p-4 border">ID</th>
+                        <th class="p-4 border">Name</th>
+                        <th class="p-4 border">Address</th>
+                        <th class="p-4 border">Age</th>
+                        <th class="p-4 border">Departmet</th>
+                    </tr>
+                </thead>
+                <tbody class=" border-collapse bg-white font-semibold ">
+                    <tr class=" border-b">
+                        <td class="p-4 text-center">FKH0001</td>
+                        <td class="p-4 text-center">Farid</td>
+                        <td class="p-4 text-center">Lilong</td>
+                        <td class="p-4 text-center">19</td>
+                        <td class="p-4 text-center">Dentist</td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+        </section>
+    </main>
+
+</body>
+
+</html>

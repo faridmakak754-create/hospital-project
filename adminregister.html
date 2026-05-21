@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+
+<body>
+    <!-- header -->
+    <section class="max-w-xl mt-40 px-6 py-8 mx-auto bg-gray-100 shadow-md border border-gray-100 rounded-md ">
+        <div class="flex items-center justify-center text-xl font-semibold ">
+            <h1>Admin Login</h1>
+        </div>
+        <form action="" class="grid  space-y-3  ">
+         
+            <div class="relative">
+                <!-- Phone-->
+                <label for="phone" class="font-semibold tracking-wider leading-tight">Contact :</label>
+                <input
+                    class="w-full bg-white mt-4 py-2 px-4 rounded-md outline-none border-2  hover:border-blue-700 focus:border-green-400"
+                    id="phone" type="text" placeholder="+910123456789" name="phone" required>
+                <i class="fa-solid fa-phone text-sky-600  absolute text-sky-600absolute right-3 translate-y-1/2 top-11"></i>
+
+            </div>
+
+            <div class="relative">
+                <!-- Password -->
+                <label for="password" class="font-semibold tracking-wider leading-tight">Password :</label>
+                <input
+                    class="w-full bg-white mt-4 py-2 px-4 rounded-md outline-none border-2  hover:border-blue-700 focus:border-green-400"
+                    id="password" type="password" placeholder="********" name="password" required>
+                <i id="togglePassword" class="fa-solid fa-eye text-sky-600 absolute right-3 translate-y-1/2 top-11 cursor-pointer">
+                </i>
+
+            </div>
+
+            <button type="submit"
+                class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded-md transition duration-300 cursor-pointer">
+
+                Login
+
+            </button>
+
+        </form>
+        <p class="font-semibold mt-4 text-center">Dont have an Account ? 
+            <a href="" class="text-blue-600">Register Now</a>
+        </p>
+    </section>
+
+    <script>
+
+        const toggle = document.getElementById("togglePassword");
+
+        toggle.addEventListener("click", () => {
+
+            if (password.type === "password") {
+                password.type = "text";
+                toggle.classList.replace("fa-eye", "fa-eye-slash");
+            } else {
+                password.type = "password";
+                toggle.classList.replace("fa-eye-slash", "fa-eye");
+            }
+
+        });
+    </script>
+</body>
+
+</html>

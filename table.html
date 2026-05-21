@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tailwind Table</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-100 ">
+
+    <header class="bg-sky-900 py-4 px-6 mb-10 ">
+        <div class="max-w-7xl mx-auto  text-white flex justify-between items-center">
+            <h1>Admin Dashboard </h1>
+            <div class="flex  items-center gap-6">
+                <p>Farid</p>
+                <form action="">
+                    <input class="bg-blue-300 px-5 py-1 rounded-md font-semibold cursor-pointer "
+                     type="submit" value="Logout">
+                </form>
+            </div>
+        </div>
+    </header>
+
+ <table class="max-w-7xl mx-auto w-full overflow-hidden rounded-lg bg-white  ">
+    <div class=" flex items-center justify-center pb-5 font-semibold text-2xl">
+        <p>Appointment List</p>
+    </div>
+    <thead class="bg-blue-900 border-collapse text-white " >
+        <tr>
+            <th class="p-4 border">ID</th>
+            <th class="p-4 border">Name</th>
+            <th class="p-4 border">Address</th>
+            <th class="p-4 border">Age</th>
+            <th class="p-4 border">Departmet</th>
+        </tr>
+    </thead>
+    <tbody class=" border-collapse bg-white font-semibold ">
+        <tr class=" border-b">
+              <td class="p-4 text-center">FKH0001</td>
+            <td class="p-4 text-center">Farid</td>
+            <td class="p-4 text-center">Lilong</td>
+            <td class="p-4 text-center">19</td>
+            <td class="p-4 text-center">Dentist</td>
+        </tr>
+        
+    </tbody>
+ </table>
+
+</body>
+</html>
