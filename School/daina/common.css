@@ -688,11 +688,11 @@ nav a:hover::after{
 @media(max-width: 600px){
 
     .logo img{
-        width: 50px;
+        width: 40px;
     }
 
     .title{
-        font-size: 16px;
+        font-size: 14px;
     }
 
     nav a{
@@ -702,14 +702,14 @@ nav a:hover::after{
 
 /* EXTRA SMALL */
 
-@media(max-width: 300px){
+@media(max-width: 400px){
 
     .title{
-        font-size: 13px;
+        font-size: 12px;
     }
 
     .logo img{
-        width: 40px;
+        width: 30px;
     }
 
     .menu-toggle{
